@@ -2,7 +2,6 @@
 layout: post
 title:  "Email Design"
 date:   2014-11-25 00:54:10
-categories: email
 ---
 
 Bonjour,
