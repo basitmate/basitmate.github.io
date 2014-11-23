@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Email Design"
-date:   2014-11-24
+date:   2014-11-24 00:53:10
 categories: email
 ---
 
