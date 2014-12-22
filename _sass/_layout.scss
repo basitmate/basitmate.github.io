@@ -1,6 +1,7 @@
 /**
  * Site header
  */
+
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
@@ -8,6 +9,68 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
+}
+
+.intro {
+	width: 100%;
+	padding: 2em 0 5em 0;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #dddddd;
+	background-image: url('');
+	background-size: 100% auto;
+}
+
+.intro div {
+	max-width: calc(800px - 30px * 2);
+	margin: 0 auto;
+	position: relative;
+}
+
+.intro h1 {
+	font-size: 5rem;
+	font-weight: 300;
+	color: #565656;
+	margin: 0;
+}
+
+.intro p {
+	font-size: 1rem;
+	padding: 0;
+}
+
+.intro a {
+	padding: 0.5em 1em;
+	margin: 0 0.2em;
+	font-size: 0.8em;
+	font-family: 'Montserrat', sans-serif;
+	color: #b4b4b4;
+	text-transform: uppercase;
+	border: 2px solid #b4b4b4;
+	border-radius: 0.3em;
+}
+
+.intro a:hover {
+	text-decoration: none;
+	background-color: #b4b4b4;
+	color: #FFFFFF;
+}
+
+.intro div:after {
+    content: " ";
+    background-color: #FFF;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    position: absolute;
+    width: 800px;
+    border: 1px solid rgb(255, 255, 255);
+    bottom: 0;
+    margin: 0 0 -5.1em -33.6em;
+    border-top: 1px solid #dddddd;
+    padding: 1em;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
 }
 
 .site-title {
