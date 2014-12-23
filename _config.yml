@@ -9,4 +9,5 @@ twitter_username: basitmate
 github_username:  basitmate
 
 # Build settings
+highlighter: rouge
 markdown: kramdown
