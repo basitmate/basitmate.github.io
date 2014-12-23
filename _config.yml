@@ -9,9 +9,5 @@ twitter_username: basitmate
 github_username:  basitmate
 
 # Build settings
-<<<<<<< HEAD
 highlighter: rouge
 markdown: kramdown
-=======
-markdown: kramdown
->>>>>>> origin/master
