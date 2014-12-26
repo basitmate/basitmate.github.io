@@ -3,12 +3,20 @@
  */
 
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    border-bottom: 2px solid #f5f5f5;
     min-height: 56px;
-
+	background-color: #576474;
+	
     // Positioning context for the mobile navigation icon
     position: relative;
+}
+
+.site-header:hover {
+	background-color: #f5f5f5;
+	border-bottom: 2px solid #576474;
+	.site-title, .page-link {
+		color: #576474;
+	}
 }
 
 .intro {
@@ -45,15 +53,15 @@
 	margin: 0 0.2em;
 	font-size: 0.8em;
 	font-family: 'Montserrat', sans-serif;
-	color: #b4b4b4;
+	color: #576474;
 	text-transform: uppercase;
-	border: 2px solid #b4b4b4;
+	border: 2px solid #576474;
 	border-radius: 0.3em;
 }
 
 .intro a:hover {
 	text-decoration: none;
-	background-color: #b4b4b4;
+	background-color: #576474;
 	color: #FFFFFF;
 }
 
@@ -68,7 +76,7 @@
     bottom: 0;
     margin: 0 0 -5.1em -33.6em;
     border-top: 1px solid #dddddd;
-    padding: 1em;
+    padding: 2em 1em 1em 1em;
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
 }
@@ -95,7 +103,7 @@
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: #fff;
     }
 }
 
@@ -108,7 +116,7 @@
     }
 
     .page-link {
-        color: $text-color;
+        color: #fff;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the first one
