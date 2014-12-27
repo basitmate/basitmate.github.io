@@ -3,6 +3,7 @@
  */
 
 .site-header {
+	border-bottom: 1px solid #dddddd;
     min-height: 56px;
 	background-color: #fff;
 	
@@ -22,7 +23,7 @@
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 	border-bottom: 1px solid #dddddd;
-	background: url('') #ecf0f1;
+	background: url('images/background.png') #ecf0f1;
 	background-size: 100% auto;
 }
 
@@ -120,19 +121,20 @@
             margin-left: 20px;
         }
 		
+		// Icons
 		&:nth-child(1):before {
 			content: "\e674";
-			margin-right: 0.2em;
+			margin-right: 0.3em;
 		}
 
 		&:nth-child(2):before {
 			content: "\e60a";
-			margin-right: 0.2em;
+			margin-right: 0.3em;
 		}		
 
 		&:nth-child(3):before {
 			content: "\e75c";
-			margin-right: 0.2em;
+			margin-right: 0.3em;
 		}		
     }
 
