@@ -33,6 +33,32 @@
 	position: relative;
 }
 
+.close {
+	height: 0em !important;
+}
+
+.max-size {
+	height: 15em !important;
+	& h1 {
+		animation: 1s linear 0s normal none 1 running doge;
+		padding-top: 1em;
+	}
+}
+
+.hideme {display: none;}
+
+@keyframes doge {
+	10% {
+		font-size: 1rem;
+	};
+	50% {
+		font-size: 2.5rem;
+	};
+	100% {
+		font-size: 5rem;
+	};
+}
+
 .intro h1 {
 	font-size: 5rem;
 	font-weight: 300;
@@ -42,7 +68,6 @@
 
 .intro p {
 	font-size: 1rem;
-	padding: 0;
 }
 
 .intro a {
@@ -62,7 +87,7 @@
 	color: #FFFFFF;
 }
 
-.intro div:after {
+.intro div > div {
     content: " ";
     background-color: #FFF;
     border-top-left-radius: 0.5em;
@@ -70,21 +95,57 @@
     position: absolute;
     width: 800px;
     border: 1px solid rgb(255, 255, 255);
-    bottom: 0;
-    margin: 0 0 -5.1em -33.6em;
+    bottom: -5.1em;
     border-top: 1px solid #dddddd;
-    padding: 2em 1em 1em 1em;
+    height: 4em;
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
+	transition: all 0.5s;
+	
+	& span {
+		background-color: #DDD;
+		border-radius: 50%;
+		border: 1px solid #b4b4b4;
+		margin: 1em 1em 0px 0px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+			font-size: 9px;
+		text-align: center;
+		padding: 6px 6px 6px 6px;
+		color: #777777;
+	}
+	& span:first-child {
+		margin-right: 4em;
+	}
+	& span:hover {
+		cursor: pointer;
+		background-color: #555555;
+		color: #FFFFFF;
+	}
 }
 
 .main-container span {
+	transition: all 0.5s cubic-bezier(0.48,0.49,0.48,0.49) 0s;
 	font-size: 10em;
 	color: #b4b4b4;
+	animation: 2s linear infinite fire;
+}
+
+@keyframes fire {
+	10% {
+		color: #E4E40E;
+	};
+	50% {
+		fcolor: #b4b4b4;
+	};
+	100% {
+		color: #b4b4b4;
+	};
 }
 
 .main-container span:hover {
-	color: #333333;
+	color: #E4E40E;
 }
 
 .home {
@@ -292,6 +353,7 @@
  */
 .post-header {
     margin-bottom: $spacing-unit;
+	padding: 0 $spacing-unit;
 }
 
 .post-title {
@@ -306,6 +368,7 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+	padding: 0 $spacing-unit;
 
     h2 {
         font-size: 32px;
