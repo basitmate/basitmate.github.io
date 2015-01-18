@@ -16,6 +16,8 @@
   var vic = document.getElementById('doge');
   var close = vic.childNodes[1]; // icon-close
   var max = vic.childNodes[3]; // icon-expand2
+  // var max = document.getElementById('w-exp');
+  var appElem = document.getElementById('appendElem');
   
   close.addEventListener('click', function() {
 	close.style.display="none";
@@ -27,12 +29,12 @@
   max.addEventListener('click', function() {
 	if (vic.hasAttribute(attr="class", 'max-size') == true) {
 		
-		var e = max.parentNode;
-		e.removeAttribute(attr="class", 'max-size');
+		vic.removeAttribute(attr="class", 'max-size');
 	} else {
 		
-		var e = max.parentNode;
-		e.className = "max-size";
+		var rssElem = "<ul class='post-list'>{% for post in site.posts %}<li><span class='post-meta'>{{ post.date | date: '%b %-d, %Y' }}</span><h2><a class='post-link' href='{{ post.url | prepend: site.baseurl }}'>{{ post.title }}</a></h2></li>{% endfor %}</ul>";
+		appendElem.innerHTML = rssElem;
+		vic.className = "max-size";
 	}
   });
   }
