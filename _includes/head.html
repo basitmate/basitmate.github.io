@@ -14,39 +14,26 @@
   
   function matEfec() {
   var vic = document.getElementById('doge');
-  var close = vic.childNodes[1];
-  var max = vic.childNodes[3];
+  var close = vic.childNodes[1]; // icon-close
+  var max = vic.childNodes[3]; // icon-expand2
   
   close.addEventListener('click', function() {
-  close.style.display="none";
-  max.style.display="none";
-  font.style.display="none";
-  var d = close.parentNode;
-  d.setAttribute(attr="class", 'close');
-  
-  var ico = document.getElementById('ico');
-  ico.style.fontSize="0em";
+	close.style.display="none";
+	max.style.display="none";
+	var e = close.parentNode;
+	e.className = "close";
   });
   
   max.addEventListener('click', function() {
-  if (vic.hasAttribute(attr="class", 'max-size') == true) {
-
-	max.className="icon-expand2";
-	var d = max.parentNode;
-	d.removeAttribute(attr="class", 'max-size');
-	
-	var font = document.getElementById('font');
-	font.style.display="none";
-	
-  } else {
-  
-	max.className="icon-contract2";
-	var d = max.parentNode;
-	d.setAttribute(attr="class", 'max-size');
-  
-	var font = document.getElementById('font');
-	font.style.display="block";
-  }
+	if (vic.hasAttribute(attr="class", 'max-size') == true) {
+		
+		var e = max.parentNode;
+		e.removeAttribute(attr="class", 'max-size');
+	} else {
+		
+		var e = max.parentNode;
+		e.className = "max-size";
+	}
   });
   }
   
