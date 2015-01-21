@@ -15,28 +15,35 @@
   function matEfec() {
   var vic = document.getElementById('doge');
   var close = vic.childNodes[1]; // icon-close
-  var max = vic.childNodes[3]; // icon-expand2
-  // var max = document.getElementById('w-exp');
+  // var max = vic.childNodes[3]; // icon-expand2
+  var bexpand = document.getElementById('b-exp');
+  var wexpand = document.getElementById('w-exp');
   var appElem = document.getElementById('appendElem');
   
   close.addEventListener('click', function() {
 	close.style.display="none";
-	max.style.display="none";
-	var e = close.parentNode;
-	e.className = "close";
+	appElem.style.display="none";
+	vic.removeAttribute(attr="class", 'max-size');
   });
   
-  max.addEventListener('click', function() {
-	if (vic.hasAttribute(attr="class", 'max-size') == true) {
+  bexpand.addEventListener('click', function() {
 		
-		vic.removeAttribute(attr="class", 'max-size');
-	} else {
-		
-		var rssElem = "<ul class='post-list'>{% for post in site.posts %}<li><span class='post-meta'>{{ post.date | date: '%b %-d, %Y' }}</span><h2><a class='post-link' href='{{ post.url | prepend: site.baseurl }}'>{{ post.title }}</a></h2></li>{% endfor %}</ul>";
-		appendElem.innerHTML = rssElem;
+		appElem.style.display="block";
+		close.style.display="block";
+		var blogElem = "<ul class='post-list'>{% for post in site.posts %}<li><span class='post-meta'>{{ post.date | date: '%b %-d, %Y' }}</span><h2><a class='post-link' href='{{ post.url | prepend: site.baseurl }}'>{{ post.title }}</a></h2></li>{% endfor %}</ul>";
+		appendElem.innerHTML = blogElem;
 		vic.className = "max-size";
-	}
   });
+  
+   wexpand.addEventListener('click', function() {
+		
+		appElem.style.display="block";
+		close.style.display="block";
+		var workElem = "<h1>Email Templates</h1><img width='100%' src='http://s27.postimg.org/fqncj1j37/background.jpg'/>";
+		appendElem.innerHTML = workElem;
+		vic.className = "max-size";
+  });
+  
   }
   
 </script>
