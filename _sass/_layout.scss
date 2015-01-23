@@ -78,13 +78,13 @@
 
 .intro a {
 	padding: 0.5em 1em;
-	margin: 0 0.2em;
 	font-size: 0.8em;
-	font-family: 'Montserrat', sans-serif;
-	color: #b4b4b4;
+	font-family: "Montserrat",sans-serif;
+	color: #B4B4B4;
 	text-transform: uppercase;
-	border: 2px solid #b4b4b4;
 	border-radius: 0.3em;
+	background-color: rgb(234, 234, 234);
+	margin: 0.3em 0.2em 0px;
 }
 
 .intro a:hover {
@@ -343,6 +343,9 @@
 
     > li {
         margin-bottom: $spacing-unit;
+		vertical-align: top;
+		width: 33%;
+		display: inline-block;
     }
 }
 
