@@ -3,9 +3,8 @@
  */
 
 .site-header {
-	border-bottom: 1px solid #dddddd;
     min-height: 56px;
-	background-color: #fff;
+	background: transparent;
 	
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -22,8 +21,7 @@
 	padding: 2em 0 6em 0;
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
-	border-bottom: 1px solid #dddddd;
-	background: url('images/background.png') #ecf0f1;
+	background: transparent;
 	background-size: 100% auto;
 }
 
@@ -101,19 +99,16 @@
 }
 
 #doge {
-    content: " ";
+	overflow: hidden;
     background-color: #FFF;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
+    border-radius: 0.5em;
     position: absolute;
     width: calc(800px - 30px * 2);
     width: -webkit-calc(800px - 30px * 2);
     border: 1px solid rgb(255, 255, 255);
     bottom: -7.1em;
-    border-top: 1px solid #dddddd;
+    border: 1px solid #dddddd;
     height: 4em;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
 	transition: all 0.5s ease-out;
 	
 	& .icon-close, .icon-expand2 {
