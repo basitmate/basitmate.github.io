@@ -20,12 +20,6 @@ function matEfec() {
   var wexpand = document.getElementById('w-exp');
   var appElem = document.getElementById('appendElem');
   
-	if (appendElem.clientHeight > 264) {
-		doge.style.height="auto";
-	} else {
-		doge.style.height="inherit";
-	}
-  
   close.addEventListener('click', function() {
 	close.style.display="none";
 	appElem.style.display="none";
@@ -45,7 +39,7 @@ function matEfec() {
 		
 		appElem.style.display="block";
 		close.style.display="block";
-		var workElem = "<div  class='append-display'><h2>Email Templates</h2><img width='128' src='http://s21.postimg.org/ct131jr0j/Browser_Testing.png'/></div>";
+		var workElem = "<div  class='append-display'><h2>Email Templates</h2><img src='http://s21.postimg.org/ct131jr0j/Browser_Testing.png'/></div>";
 		appendElem.innerHTML = workElem;
 		vic.className = "max-size";
   });
