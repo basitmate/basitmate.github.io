@@ -12,7 +12,7 @@
 
 <script type="text/javascript">
   
-  function matEfec() {
+function matEfec() {
   var vic = document.getElementById('doge');
   var close = vic.childNodes[1]; // icon-close
   // var max = vic.childNodes[3]; // icon-expand2
@@ -20,11 +20,17 @@
   var wexpand = document.getElementById('w-exp');
   var appElem = document.getElementById('appendElem');
   
+	if (appendElem.clientHeight > 264) {
+		doge.style.height="auto";
+	} else {
+		doge.style.height="inherit";
+	}
+  
   close.addEventListener('click', function() {
 	close.style.display="none";
 	appElem.style.display="none";
 	vic.removeAttribute(attr="class", 'max-size');
-  });
+  }, false);
   
   bexpand.addEventListener('click', function() {
 		
@@ -39,12 +45,23 @@
 		
 		appElem.style.display="block";
 		close.style.display="block";
-		var workElem = "<h1>Email Templates</h1><img width='500' src='http://s27.postimg.org/fqncj1j37/background.jpg'/>";
+		var workElem = "<div  class='append-display'><h2>Email Templates</h2><img width='128' src='http://s21.postimg.org/ct131jr0j/Browser_Testing.png'/></div>";
 		appendElem.innerHTML = workElem;
 		vic.className = "max-size";
   });
+}
   
-  }
+function scrollTo(element, to, duration) {
+    if (duration < 0) return;
+    var difference = to - element.scrollTop;
+    var perTick = difference / duration * 10;
+
+    setTimeout(function() {
+        element.scrollTop = element.scrollTop + perTick;
+        if (element.scrollTop === to) return;
+        scrollTo(element, to, duration - 10);
+    }, 10);
+}
   
 </script>
   

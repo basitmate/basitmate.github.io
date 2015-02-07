@@ -41,7 +41,8 @@
 }
 
 .appElem {
-	padding: 2em 2em 0;
+	padding: 2em;
+	display: none;
 }
 
 .close {
@@ -91,24 +92,43 @@
 	color: #FFFFFF;
 }
 
-.max-size {
-	height: 17em !important;
-	border: 1px solid #dddddd !important;
+.append-display {
+	font-family: "Montserrat",sans-serif;
+	color: #b4b4b4;
+	display: table;
+	padding: 1em;
 	border-radius: 0.5em;
+	box-shadow: 0.5px 1px 0.5px #B4B4B4;
+	background-color: #f0f0f0;
+	width: 33%;
+}
+
+.append-display:hover {
+	background-color: #f5f5f5;
+	cursor: pointer;
+}
+
+.max-size {
+	border: 1px solid #dddddd !important;
 	box-shadow: 0px 0px 10px #dddddd;
+	margin-top: -10em !important;
+	height: 17em;
+	padding: 0 !important;
 }
 
 #doge {
 	overflow: hidden;
     background-color: #FFF;
     border-radius: 0.5em;
+	left: 0;
+	right: 0;
+	margin: 2em auto 0px;
+	padding: 1em 0;
     position: absolute;
     width: calc(800px - 30px * 2);
     width: -webkit-calc(800px - 30px * 2);
     border: 1px solid rgb(255, 255, 255);
-    bottom: -7.1em;
     border: 1px solid #dddddd;
-    height: 4em;
 	transition: all 0.5s ease-out;
 	
 	& .icon-close, .icon-expand2 {
@@ -119,7 +139,7 @@
 		position: absolute;
 		top: 0px;
 		right: 0px;
-			font-size: 9px;
+		font-size: 9px;
 		text-align: center;
 		padding: 6px 6px 6px 6px;
 		color: #777777;
@@ -255,8 +275,6 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
 }
 
 .footer-heading {
@@ -325,7 +343,6 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
 }
 
 .page-heading {
