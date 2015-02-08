@@ -19,6 +19,7 @@ function matEfec() {
   var bexpand = document.getElementById('b-exp');
   var wexpand = document.getElementById('w-exp');
   var appElem = document.getElementById('appendElem');
+  var appUl = document.getElementById('appendUl');
   
   close.addEventListener('click', function() {
 	close.style.display="none";
@@ -30,8 +31,8 @@ function matEfec() {
 		
 		appElem.style.display="block";
 		close.style.display="block";
-		var blogElem = "<ul class='post-list'>{% for post in site.posts %}<li><span class='post-meta'>{{ post.date | date: '%b %-d, %Y' }}</span><h2><a class='post-link' href='{{ post.url | prepend: site.baseurl }}'>{{ post.title }}</a></h2></li>{% endfor %}</ul>";
-		appendElem.innerHTML = blogElem;
+		var blogElem = "{% for post in site.posts %}<li><span class='post-meta'>{{ post.date | date: '%b %-d, %Y' }}</span><h2><a class='post-link' href='{{ post.url | prepend: site.baseurl }}'>{{ post.title }}</a></h2></li>{% endfor %}";
+		appUl.innerHTML = blogElem;
 		vic.className = "max-size";
   });
   
@@ -39,8 +40,9 @@ function matEfec() {
 		
 		appElem.style.display="block";
 		close.style.display="block";
-		var workElem = "<div  class='append-display'><h2>Email Templates</h2><img src='http://s21.postimg.org/ct131jr0j/Browser_Testing.png'/></div>";
-		appendElem.innerHTML = workElem;
+		var email = "<li><h2>Email Templates</h2><img src='images/Envelope.png'/></li>";
+		var web = "<li><h2>Web Design</h2><img src='images/Browser-Testing.png'/></li>";
+		appUl.innerHTML = email + web;
 		vic.className = "max-size";
   });
 }

@@ -42,7 +42,7 @@
 }
 
 .appElem {
-	padding: 2em;
+	padding: 1.5em;
 	display: none;
 }
 
@@ -86,21 +86,6 @@
 	padding: 0.5em 1.8em;
 	text-transform: uppercase;
 	font-size: 0.7em;
-}
-
-.append-display {
-	color: #b4b4b4;
-	display: table;
-	padding: 0.5em;
-	border-radius: 0.5em;
-	box-shadow: 0.5px 1px 0.5px #B4B4B4;
-	background-color: #f0f0f0;
-	width: 33%;
-}
-
-.append-display:hover, .post-list > li:hover  {
-	background-color: #f5f5f5;
-	cursor: pointer;
 }
 
 .max-size {
@@ -349,16 +334,17 @@
 }
 
 .post-list {
-    margin-left: 0;
+    margin: 0;
+	padding: 0;
     list-style: none;
-
+	
     & li {
 		vertical-align: top;
 		width: 33%;
 		display: inline-block;
 		background-color: #F0F0F0;
 		border-radius: 0.5em;
-		padding: 1em 0px 1em;
+		padding: 1em;
 		text-align: center;
 		box-shadow: 0.5px 1px 0.5px rgb(180, 180, 180);
 		color: #b4b4b4;
@@ -367,7 +353,9 @@
 		margin-left: 1em;
 	}
 	& li:hover {
+		background-color: #f5f5f5;
 		color: #777777;
+		cursor: pointer;
 	}
 	& h2 {
 		margin-bottom: 0;
