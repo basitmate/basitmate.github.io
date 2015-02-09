@@ -24,6 +24,9 @@ function matEfec() {
   close.addEventListener('click', function() {
 	close.style.display="none";
 	appElem.style.display="none";
+	while (appUl.firstChild) {
+		appUl.removeChild(appUl.firstChild);
+	}
 	vic.removeAttribute(attr="class", 'max-size');
   }, false);
   
@@ -31,7 +34,7 @@ function matEfec() {
 		
 		appElem.style.display="block";
 		close.style.display="block";
-		var blogElem = "{% for post in site.posts %}<li><span class='post-meta'>{{ post.date | date: '%b %-d, %Y' }}</span><h2><a class='post-link' href='{{ post.url | prepend: site.baseurl }}'>{{ post.title }}</a></h2></li>{% endfor %}";
+		var blogElem = "{% for post in site.posts %}<li><span><span class='post-meta'>{{ post.date | date: '%b %-d, %Y' }}</span><h2><a class='post-link' href='{{ post.url | prepend: site.baseurl }}'>{{ post.title }}</a></h2></span></li>{% endfor %}";
 		appUl.innerHTML = blogElem;
 		vic.className = "max-size";
   });
@@ -40,8 +43,8 @@ function matEfec() {
 		
 		appElem.style.display="block";
 		close.style.display="block";
-		var email = "<li><h2>Email Templates</h2><img src='images/Envelope.png'/></li>";
-		var web = "<li><h2>Web Design</h2><img src='images/Browser-Testing.png'/></li>";
+		var email = "<li><h2 style='margin-bottom: 0.6em;'>Email Templates</h2><img src='images/Browser-Testing.png'/></li>";
+		var web = "<li><h2 style='margin-bottom: 0.6em;'>Web Design</h2><img src='images/Desktop.png'/></li>";
 		appUl.innerHTML = email + web;
 		vic.className = "max-size";
   });

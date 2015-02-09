@@ -10,12 +10,6 @@
     position: relative;
 }
 
-.site-header:hover {
-	.site-title, .page-link {
-		color: #576474;
-	}
-}
-
 .intro {
 	width: 100%;
 	padding: 2em 0 10px 0;
@@ -68,7 +62,7 @@
 }
 
 .intro p {
-	font-size: 0.9em;
+	font-size: 1em;
 	color: #999999;
 }
 
@@ -85,7 +79,7 @@
 	border: 2px solid #9C9C9C;
 	padding: 0.5em 1.8em;
 	text-transform: uppercase;
-	font-size: 0.7em;
+	font-size: 0.76em;
 }
 
 .max-size {
@@ -112,8 +106,8 @@
 	-moz-transition: all 0.5s ease-out 0s;
 	transition: all 0.5s ease-out 0s;
 	height: 0.5em;
-	bottom: 2.5em;
-	width: 16.5em;
+	bottom: 2.2em;
+	width: 18.5em;
 	
 	& .icon-close, .icon-expand2 {
 		border-radius: 50%;
@@ -185,28 +179,52 @@
     }
 
     .page-link {
-        color: #b4b4b4;
-        line-height: $base-line-height;
+		color: #B4B4B4;
+		line-height: 1.5;
+		font-size: 0.8em;
+		background-color: #FFFFFF;
+		-moz-border-radius: 0.5em;
+		-webkit-border-radius: 0.5em;
+		border-radius: 0.5em;
+		padding: 0.4em 0.7em 0.3em 0em;
+		border: 1px solid #E4E4E4;
+		
+		&:hover {
+			border-color: #b4b4b4;
+			
+			&:before {
+				color: #777777;
+			}
+		}
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
-            margin-left: 20px;
+            margin-left: 1em;
         }
+		
+		&:before {
+			background-color: #E7E7E7;
+			-webkit-border-top-left-radius: 0.4em;
+			-moz-border-radius-topleft: 0.4em;
+			border-top-left-radius: 0.4em;
+			-webkit-border-bottom-left-radius: 0.5em;
+			-moz-border-radius-bottomleft: 0.5em;
+			border-bottom-left-radius: 0.5em;
+			padding: 0.47em 0.6em 0.50em;
+			margin-right: 0.5em;
+		}
 		
 		// Icons
 		&:nth-child(1):before {
 			content: "\e674";
-			margin-right: 0.3em;
 		}
 
 		&:nth-child(2):before {
 			content: "\e60a";
-			margin-right: 0.3em;
 		}		
 
 		&:nth-child(3):before {
 			content: "\e75c";
-			margin-right: 0.3em;
 		}		
     }
 
@@ -261,6 +279,35 @@
  * Site footer
  */
 .site-footer {
+
+}
+
+.footer-info {
+	text-align: center;
+	display: table;
+	margin: 0px auto;
+	
+	& .link {
+		color: #b4b4b4;
+		border-right: 1px solid #ccc;
+		padding: 0 0.5em;
+		line-height: 0.2;
+		font-size: 0.8em;
+	}
+	
+	& .link:nth-child(4) {
+		border: none;
+	}
+	
+	& .social {
+		font-size: 1.3em;
+		line-height: 2em;
+		color: #b4b4b4;
+	}
+	
+	& .social:not(:first-child) {
+		margin-left: 0.2em;
+	}
 }
 
 .footer-heading {
@@ -329,6 +376,12 @@
  * Page content
  */
 
+.page-content {
+ 	> div {
+		margin-bottom: 0.9em;
+	}
+}
+ 
 .page-heading {
     font-size: 20px;
 }
@@ -341,14 +394,19 @@
     & li {
 		vertical-align: top;
 		width: 33%;
-		display: inline-block;
+		display: inline-table;
 		background-color: #F0F0F0;
 		border-radius: 0.5em;
 		padding: 1em;
 		text-align: center;
 		box-shadow: 0.5px 1px 0.5px rgb(180, 180, 180);
 		color: #b4b4b4;
+		height: 9.5em;
     }
+	& li > span {
+		display: table-cell;
+		vertical-align: middle;
+	}
 	& li:nth-child(2) {
 		margin-left: 1em;
 	}
@@ -402,6 +460,8 @@
     font-size: 4em;
     letter-spacing: -1px;
     line-height: 1;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
 
     @include media-query($on-laptop) {
         font-size: 36px;
@@ -409,9 +469,8 @@
 }
 
 .post-content {
-    margin-bottom: $spacing-unit;
 	padding: 0 $spacing-unit;
-
+	
     h2 {
         font-size: 32px;
 
