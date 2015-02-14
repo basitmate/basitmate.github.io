@@ -4,7 +4,7 @@
 
 .site-header {
     min-height: 56px;
-	background-color: rgba(255, 255, 255, 0.67);
+	background-color: rgba(255, 255, 255, 0.5);
 	
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -17,7 +17,7 @@
 	
 	& h1 {
 	color: #9C9C9C;
-	font-family: 'Dancing Script', 'Bickley Script LET', Cursive, Lucida Handwriting;
+	font-family: 'Dancing Script', 'Bickley Script LET', Lucida Handwriting;
 	font-weight: bold;
 	margin: 0em 0px 0px;
 	text-shadow: 0.5px 1px 1px #575757;
@@ -187,14 +187,31 @@
 .site-title {
 	font-size: 26px;
 	line-height: 56px;
-	font-weight: 800;
+	font-weight: 700;
 	letter-spacing: -2px;
 	font-family: Open Sans;
-
+	
+	span {
+		color: #ccc;
+		font-size: 15px;
+		letter-spacing: 0px;
+		font-weight: 600;
+		margin-left: 0.2em;
+		line-height: 0;
+		display: none;
+	}
+	
     &,
     &:visited {
         color: #b4b4b4;
     }
+	
+	&:hover {
+		
+		& span {
+			display: inline;
+		}
+	}
 }
 
 .site-nav {
@@ -389,13 +406,11 @@
 }
 
 .page-link {
-	color: #FFFFFF;
 	line-height: 1.5;
 	font-size: 0.8em;
-	background-color: rgb(194, 194, 194);
 	border-radius: 0.5em;
 	font-family: open sans;
-	font-weight: 800;
+	font-weight: 700;
 	padding: 0.3em 1em;
 	box-shadow: 0px 0px 3px rgb(234, 234, 234);
 	
@@ -403,33 +418,36 @@
 		color: #FFFFFF;
 	}
 	
+	// Pagination styling
 	&:nth-child(1) {
 		color: #FFFFFF;
-		background-color: rgb(194, 194, 194);
+		background-color: #b4b4b4;
 	}
 	
 	&:nth-child(2) {
 		color: #FFFFFF;
-		background-color: rgb(194, 194, 194);
+		background-color: #ddd;
 	}
 	
-	&:nth-child(3) {
-		color: #FFFFFF;
-		background-color: rgb(194, 194, 194);
+	&:nth-child(n+3) {
+		display: none;
 	}
 	
+	// Pages hover
 	&:hover {
-		border-color: #b4b4b4;
-		color: #777777;
-			
-		&:before {
-			color: #777777;
+		&:nth-child(1) {
+			background-color: #ddd;
+			color: #b4b4b4;
+		}
+		
+		&:nth-child(2) {
+			color: #b4b4b4;
 		}
 	}
 
     // Gaps between nav items, but not on the first one
     &:not(:first-child) {
-        margin-left: 1em;
+        margin-left: 0.5em;
     }
 }
 
@@ -511,6 +529,7 @@
 	padding: 0;
     list-style: none;
 	text-align: center;
+	font-family: "Montserrat",sans-serif;
 	
     & li {
 		vertical-align: top;
@@ -572,34 +591,6 @@
 
 .post-content {
 	padding: 0 1.5em;
-	
-	a {
-		color: #473F80;
-	}
-	
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
 }
 
 .rss-subscribe {
