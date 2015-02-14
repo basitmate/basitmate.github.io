@@ -185,10 +185,11 @@
 }
 
 .site-title {
-    font-size: 26px;
-    line-height: 56px;
-	font-family: Raleway;
-	font-weight: 400;
+	font-size: 26px;
+	line-height: 56px;
+	font-weight: 800;
+	letter-spacing: -2px;
+	font-family: Open Sans;
 
     &,
     &:visited {
@@ -377,7 +378,6 @@
 /**
  * Page content
  */
-
 .page-content {
  	> div {
 		margin-bottom: 0.9em;
@@ -416,31 +416,6 @@
     &:not(:first-child) {
         margin-left: 1em;
     }
-		
-	&:before {
-		background-color: #E7E7E7;
-		-webkit-border-top-left-radius: 0.4em;
-		-moz-border-radius-topleft: 0.4em;
-		border-top-left-radius: 0.4em;
-		-webkit-border-bottom-left-radius: 0.5em;
-		-moz-border-radius-bottomleft: 0.5em;
-		border-bottom-left-radius: 0.5em;
-		padding: 0.47em 0.6em 0.50em;
-		margin-right: 0.5em;
-	}
-		
-	// Icons
-	&:nth-child(1):before {
-		content: "\e674";
-	}
-
-	&:nth-child(2):before {
-		content: "\e60a";
-	}		
-
-	&:nth-child(3):before {
-		content: "\e75c";
-	}		
 }
 
 /**
@@ -451,6 +426,51 @@
 	box-shadow: 0px 0px 3px #ddd;
 	padding: 1.5em 0px;
 	background-color: #fff;
+	
+	.post-share {
+		text-align: center;
+		padding: 1em 22px 0;
+		border-top: 1px solid #dddddd;
+		
+		a:nth-child(1):before {
+			content: "\e769";
+			font-family: icomoon;
+		}
+		
+		a:nth-child(2):before {
+			content: "\e76d";
+			font-family: icomoon;
+		}
+		
+		a:nth-child(3):before {
+			content: "\e764";
+			font-family: icomoon;
+		}
+		
+		a:before {
+			margin-right: 0.3em;
+			vertical-align: baseline;
+		}
+		
+		a:not(:first-child) {
+			margin-left: 0.5em;
+		}
+		
+		a {
+			font-family: source sans pro;
+			font-size: 0.8em;
+			border: 1px solid #b4b4b4;
+			color: #b4b4b4;
+			border-radius: 0.9em;
+			padding: 0.2em 1em;
+			transition: 0.2s ease-out;
+		}
+		
+		a:hover {
+			border-color: #555555;
+			color: #555555;
+		}
+	}
 }
  
 .post-header {

@@ -11,5 +11,11 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
+  
+  <div class="post-share">
+    <a onclick="window.open(this.href, '_blank', 'height=300,width=500'); return false;" href="https://www.facebook.com/sharer/sharer.php?t={{ page.title }}&u={{ page.url }}">facebook</a>
+    <a onclick="window.open(this.href, '_blank', 'height=300,width=500'); return false;" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url }}&via=Front End Designer">twitter</a>
+    <a onclick="window.open(this.href, '_blank', 'height=300,width=500'); return false;" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}">google+</a>
+  </div>
 
 </div>
