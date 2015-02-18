@@ -1,0 +1,9 @@
+.page-link:nth-child(2) {
+	background-color: transparent !important;
+	color: #777;
+	border: 2px solid #777;
+  
+	&:hover {
+		color: #777;
+	}
+}
