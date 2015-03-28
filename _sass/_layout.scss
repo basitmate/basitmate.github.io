@@ -5,6 +5,7 @@
 .site-header {
     min-height: 56px;
 	background-color: rgba(255, 255, 255, 0.5);
+	font-family: Open Sans;
 	
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -30,8 +31,7 @@
 	}
 
 	& p a {
-	color: #535353;
-	border-bottom: 2px solid #b7b7b7;
+	color: #b4b4b4;
 	}
 	
 	@include media-query($on-palm) {
@@ -189,7 +189,6 @@
 	line-height: 56px;
 	font-weight: 700;
 	letter-spacing: -2px;
-	font-family: Open Sans;
 	
 	span {
 		color: #ccc;
@@ -491,17 +490,18 @@
 		}
 		
 		a {
-			font-size: 0.8em;
-			border: 1px solid #b4b4b4;
-			color: #b4b4b4;
-			border-radius: 0.9em;
-			padding: 0.2em 1em;
+			font-size: 0.7em;
+			border: 1px solid #ddd;
+			color: #777;
+			transition: all 0.2s ease-out 0s;
+			text-transform: uppercase;
+			font-family: Montserrat;
+			padding: 3px 10px;
 			transition: 0.2s ease-out;
 		}
 		
 		a:hover {
-			border-color: #555555;
-			color: #555555;
+			border-color: #777777;
 		}
 		
 		@include media-query($on-laptop) {
@@ -595,6 +595,10 @@
 
 .post-content {
 	padding: 0 1.5em;
+	
+	&:hover a {
+		color: blueviolet;
+	}
 }
 
 .rss-subscribe {
