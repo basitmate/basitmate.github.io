@@ -4,7 +4,7 @@ email: basitmate@live.com
 description: > # this means to ignore newlines until "baseurl:"
   This is a blog about Email Development and Web Development ran by Sheikh Basit
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://frontenddesigner.com" # the base hostname & protocol for your site
+url: "http://basitmate.github.io" # the base hostname & protocol for your site
 twitter_username: basitmate
 github_username:  basitmate
 
